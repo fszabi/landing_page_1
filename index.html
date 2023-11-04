@@ -1,0 +1,1088 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            screens: {
+              xs: "25rem",
+              sm: "40rem",
+              "sm-max": { max: "40rem" },
+              md: "45rem",
+              lg: "60rem",
+              xl: "75rem",
+              "2xl": "90rem",
+            },
+            container: {
+              center: true,
+              padding: "1rem",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-[#fff] text-[#131316] font-['Poppins']">
+    <input
+      class="peer/option1 sr-only"
+      id="option-1"
+      type="radio"
+      name="panel"
+    />
+    <input
+      class="peer/option2 sr-only"
+      id="option-2"
+      type="radio"
+      name="panel"
+    />
+
+    <header
+      class="py-7 [&_li]:font-medium [&_li]:text-base [&_a]:transition-opacity hover:[&_a]:opacity-50 [&_button]:text-base [&_button]:font-medium peer-checked/option1:[&_#open]:hidden peer-checked/option1:[&_#close]:block peer-checked/option1:[&_#close]:z-50 peer-checked/option1:[&_#primary-nav]:block peer-checked/option1:[&_#primary-nav>ul]:flex-col peer-checked/option1:[&_#primary-nav]:bg-[#ffffff] peer-checked/option1:[&_#primary-nav]:shadow-2xl peer-checked/option1:[&_#primary-nav]:translate-x-0 peer-checked/option2:[&_#open]:block peer-checked/option2:[&_#open]:sm:hidden peer-checked/option2:[&_#close]:hidden"
+    >
+      <div class="container flex justify-between">
+        <img
+          class="object-contain self-start"
+          src="https://raw.githubusercontent.com/fszabi/landing_page_1/main/img/logo.png"
+          alt="growth logo"
+        />
+
+        <nav
+          id="primary-nav"
+          class="sm-max:fixed sm-max:z-40 sm-max:inset-[0_0_0_30%] sm-max:translate-x-[100%] transition-all duration-300 sm-max:px-[1rem] sm-max:py-14"
+        >
+          <ul class="flex items-center gap-10">
+            <li>
+              <a href="">Features</a>
+            </li>
+            <li>
+              <a href="">About us</a>
+            </li>
+            <li>
+              <a href="">Blog</a>
+            </li>
+            <li>
+              <button
+                class="bg-[#F5F5F5] transition-colors duration-300 hover:text-[#fff] hover:bg-[#4891FF] rounded-xl px-6 py-3"
+              >
+                Log In
+              </button>
+            </li>
+          </ul>
+        </nav>
+        <label
+          for="option-1"
+          id="open"
+          class="bg-[#F5F5F5] rounded-xl px-3 py-2 sm:hidden"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-menu"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M4 8l16 0"></path>
+            <path d="M4 16l16 0"></path>
+          </svg>
+        </label>
+        <label
+          for="option-2"
+          id="close"
+          class="bg-[#F5F5F5] rounded-xl px-3 py-2 hidden"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-x"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </label>
+      </div>
+    </header>
+    <main
+      class="[&>section]:py-[4.5rem] [&_h2]:font-medium [&_h2]:leading-[1.3] [&_h2]:text-[2rem] [&_h2]:lg:text-5xl [&_h3]:font-medium [&_h3]:text-[1.75rem] [&_h3]:lg:text-4xl [&_button]:text-base [&_button]:lg:text-lg [&_button]:font-medium [&_button]:px-8 [&_button]:py-3 [&_button]:rounded-xl"
+    >
+      <section class="hero text-center sm:text-left">
+        <div class="container">
+          <h1
+            class="text-4xl lg:text-6xl font-medium leading-[1.1] max-w-[55rem]"
+          >
+            A powerful solution to grow your startup. Fast!
+          </h1>
+          <p class="mt-6 mb-10 max-w-[40rem] text-lg lg:text-xl">
+            Organise, collaborate, and track progress seamlessly with our
+            one-stop-shop startup growth tool.
+          </p>
+          <div class="grid lg:grid-cols-2 gap-6">
+            <div class="space-y-10">
+              <div
+                class="flex flex-wrap gap-5 [&>button]:w-full [&>button]:sm:w-auto"
+              >
+                <button
+                  class="bg-[#4891FF] text-[#fff] transition-colors duration-300 hover:bg-[#1570F9]"
+                >
+                  Get started
+                </button>
+                <button
+                  class="bg-[#F5F5F5] transition-colors duration-300 hover:text-[#fff] hover:bg-[#4891FF] flex gap-3 justify-center items-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-bookmark"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M18 7v14l-6 -4l-6 4v-14a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4z"
+                    ></path>
+                  </svg>
+                  <span class="leading-none">Book a demo</span>
+                </button>
+              </div>
+              <img
+                class="w-full"
+                src="https://raw.githubusercontent.com/fszabi/landing_page_1/main/img/team.png"
+                alt="team"
+              />
+            </div>
+            <div
+              class="grid [grid-template-areas:'growth_growth_growth'_'image_call_call'] sm:[grid-template-areas:'growth_growth_image'_'growth_growth_call'] gap-6 [&>div]:rounded-lg"
+            >
+              <img
+                class="[grid-area:growth] w-full"
+                src="https://raw.githubusercontent.com/fszabi/landing_page_1/main/img/growth.png"
+                alt="growth"
+              />
+
+              <div
+                class="bg-[#F5F5F5] flex justify-center items-end relative [grid-area:image]"
+              >
+                <div
+                  class="bg-[#fff] aspect-square w-fit h-10 rounded-full p-2 m-4 z-10 flex justify-center items-center"
+                >
+                  <img
+                    class="aspect-square h-5"
+                    src="https://raw.githubusercontent.com/fszabi/landing_page_1/e45da6b05c30d4bf10ac4f3deef5c845e1254722/svg/microphone.svg"
+                    alt="microphone"
+                  />
+                </div>
+                <img
+                  class="absolute max-h-[10rem]"
+                  src="https://raw.githubusercontent.com/fszabi/landing_page_1/main/img/call.png"
+                  alt="call image"
+                />
+              </div>
+              <div
+                class="bg-[#DAF4FE] p-4 text-center grid place-content-center [grid-area:call] space-y-3"
+              >
+                <div>
+                  <h3 class="font-semibold text-base">Team call</h3>
+                  <p class="text-[0.625rem] leading-[1.2]">
+                    You’ve been invited to a virtual meeting by John
+                  </p>
+                </div>
+                <p class="font-semibold text-xs">Jan 17 at 9AM</p>
+                <button
+                  class="bg-[#4891FF] w-full text-xs text-[#fff] rounded-md !p-1"
+                >
+                  Join
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-[#131316] [&_h2]:text-[#fff]">
+        <div class="container">
+          <div class="grid place-items-center space-y-10 md:space-y-14">
+            <h2 class="text-center">
+              See how it works and get started in less than 2 minutes
+            </h2>
+            <img
+              src="https://raw.githubusercontent.com/fszabi/landing_page_1/main/img/video.png"
+              alt="intro video"
+            />
+            <button
+              class="bg-[#4891FF] w-full md:w-auto text-[#fff] transition-colors duration-300 hover:bg-[#1570F9]"
+            >
+              Get started
+            </button>
+          </div>
+          <div class="bg-[#494949] w-full h-[1px] my-[4.5rem]"></div>
+
+          <h2 class="mb-10 md:mb-16">
+            Don't just take our word for it, see the success stories from
+            businesses just like yours.
+          </h2>
+
+          <div
+            class="grid gap-5 grid-cols-[repeat(auto-fit,_minmax(min(15rem,_100%),_1fr))] [&>div]:py-8 [&>div]:px-6 [&>div]:space-y-5 [&>div]:bg-[#fff] [&>div]:rounded-2xl [&_p:first-child]:italic [&_p:first-child]:lg:text-xl [&_span]:lg:text-lg [&_span]:block [&_span]:font-medium"
+          >
+            <div>
+              <p>
+                “Our business has seen a significant increase in productivity
+                since we started using the Growth app.”
+              </p>
+              <p>
+                <span>Katherine Smith</span>
+                Capodopera
+              </p>
+            </div>
+            <div>
+              <p>
+                “As a small business owner, it's important to have a tool that
+                can help me keep track of everything. The Growth app has been a
+                lifesaver for me, allowing me to manage my contacts, schedule
+                appointments, and track progress all in one place.”
+              </p>
+              <p>
+                <span>Jonathan Lee</span>
+                Red Bolt
+              </p>
+            </div>
+            <div>
+              <p>
+                “The dashboards and reporting feature has provided valuable
+                insights into our performance and helped us make data-driven
+                decisions. It's a game changer for us.”
+              </p>
+              <p>
+                <span>David Wilson</span>
+                Slide
+              </p>
+            </div>
+            <div>
+              <p>
+                “Our business has seen a significant increase in productivity
+                since we started using the Growth app.”
+              </p>
+              <p>
+                <span>Katherine Smith</span>
+                Capodopera
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-[#fff]">
+        <div class="container">
+          <div class="space-y-8 md:space-y-16">
+            <div class="space-y-3">
+              <h2 class="text-center">Pricing</h2>
+              <p class="text-center">
+                Start free and scale while you grow. No hidden fees. Unlimited
+                users for free.
+              </p>
+            </div>
+            <div
+              class="grid mx-auto gap-5 place-items-center grid-cols-[repeat(auto-fit,_minmax(min(18rem,_100%),_1fr))] max-w-[55rem] [&>div]:py-10 [&>div]:px-6 [&>div]:lg:p-14 [&>div]:h-fit [&>div]:rounded-2xl [&>div]:space-y-8 [&_ul]:space-y-3 [&_li]:grid [&_li]:grid-cols-[auto,_1fr] [&_li]:gap-2 [&_svg]:w-[20px] [&_svg]:h-[20px] [&_button]:w-full"
+            >
+              <div class="bg-[#DFDEE2]">
+                <div>
+                  <h3>Simple</h3>
+                  <p>
+                    Keep track of your contacts, gain valuable insights, analyse
+                    live data and performance metrics.
+                  </p>
+                </div>
+                <p class="text-xs lg:text-sm">
+                  <span class="font-medium text-[1.75rem] lg:text-4xl mr-2"
+                    >Free</span
+                  >
+                  * No credit card required
+                </p>
+
+                <div class="bg-[#cac9cc] w-full h-[2px] my-[4.5rem]"></div>
+
+                <ul>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon icon-tabler icon-tabler-check"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M5 12l5 5l10 -10"></path>
+                    </svg>
+                    <span>Real-time monitoring</span>
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon icon-tabler icon-tabler-check"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M5 12l5 5l10 -10"></path>
+                    </svg>
+                    <span>Track key performance indicators</span>
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon icon-tabler icon-tabler-check"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M5 12l5 5l10 -10"></path>
+                    </svg>
+                    <span>Schedule appointments</span>
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon icon-tabler icon-tabler-check"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M5 12l5 5l10 -10"></path>
+                    </svg>
+                    Organize, delegate and keep track of tasks
+                  </li>
+                </ul>
+                <button
+                  class="bg-[#4891FF] text-[#fff] transition-colors duration-300 hover:bg-[#1570F9]"
+                >
+                  Get started
+                </button>
+              </div>
+              <div class="bg-[#131316] text-[#fff]">
+                <div>
+                  <h3>Premium</h3>
+                  <p>
+                    Keep track of your contacts, gain valuable insights, analyse
+                    live data and performance metrics.
+                  </p>
+                </div>
+                <p class="lg:text-xl">
+                  <span class="font-medium text-[1.75rem] lg:text-4xl"
+                    >$49</span
+                  >
+                  /month
+                </p>
+
+                <div class="bg-[#494949] w-full h-[2px] my-[4.5rem]"></div>
+
+                <div>
+                  <p class="mb-3">Everything from the free plan<br />plus:</p>
+                  <ul>
+                    <li>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-check"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          stroke="none"
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        ></path>
+                        <path d="M5 12l5 5l10 -10"></path>
+                      </svg>
+                      <span>Data-driven decisions</span>
+                    </li>
+                    <li>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-check"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          stroke="none"
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        ></path>
+                        <path d="M5 12l5 5l10 -10"></path>
+                      </svg>
+                      <span>Data visualisation</span>
+                    </li>
+                    <li>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-check"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          stroke="none"
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        ></path>
+                        <path d="M5 12l5 5l10 -10"></path>
+                      </svg>
+                      <span>Schedule appointments</span>
+                    </li>
+                    <li>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-check"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          stroke="none"
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        ></path>
+                        <path d="M5 12l5 5l10 -10"></path>
+                      </svg>
+                      <span>Store and organise contact information</span>
+                    </li>
+                    <li>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-check"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          stroke="none"
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        ></path>
+                        <path d="M5 12l5 5l10 -10"></path>
+                      </svg>
+                      <span
+                        >Teal-time communication tools for messaging and video
+                        conferencing</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <button
+                  class="bg-[#4891FF] text-[#fff] transition-colors duration-300 hover:bg-[#1570F9]"
+                >
+                  Get started
+                </button>
+              </div>
+            </div>
+            <div class="space-y-4">
+              <p class="text-center text-sm lg:text-base">
+                All prices are in USD and charged per month with applicable
+                taxes added at checkout.
+              </p>
+              <p class="flex justify-center items-center gap-2 font-semibold">
+                View Features
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-arrow-down"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M12 5l0 14"></path>
+                  <path d="M18 13l-6 6"></path>
+                  <path d="M6 13l6 6"></path>
+                </svg>
+              </p>
+            </div>
+          </div>
+          <div class="bg-[#dadadb] w-full h-[1px] my-[4.5rem]"></div>
+
+          <div class="relative">
+            <input
+              class="peer/option3 sr-only top-full"
+              id="option-3"
+              type="radio"
+              name="panel"
+            />
+            <input
+              class="peer/option4 sr-only top-full"
+              id="option-4"
+              type="radio"
+              name="panel"
+            />
+            <input
+              class="peer/option5 sr-only top-full"
+              id="option-5"
+              type="radio"
+              name="panel"
+            />
+            <input
+              class="peer/option6 sr-only top-full"
+              id="option-6"
+              type="radio"
+              name="panel"
+            />
+            <input
+              class="peer/option7 sr-only top-full"
+              id="option-7"
+              type="radio"
+              name="panel"
+            />
+            <input
+              class="peer/option8 sr-only top-full"
+              id="option-8"
+              type="radio"
+              name="panel"
+            />
+            <input
+              class="peer/option9 sr-only top-full"
+              id="option-9"
+              type="radio"
+              name="panel"
+            />
+            <input
+              class="peer/option10 sr-only top-full"
+              id="option-10"
+              type="radio"
+              name="panel"
+            />
+            <input
+              class="peer/option11 sr-only top-full"
+              id="option-11"
+              type="radio"
+              name="panel"
+            />
+            <input
+              class="peer/option12 sr-only top-full"
+              id="option-12"
+              type="radio"
+              name="panel"
+            />
+            <input
+              class="peer/option13 sr-only top-full"
+              id="option-13"
+              type="radio"
+              name="panel"
+            />
+            <input
+              class="peer/option14 sr-only top-full"
+              id="option-14"
+              type="radio"
+              name="panel"
+            />
+
+            <div
+              class="space-y-10 md:space-y-28 peer-checked/option3:[&_#question-close-1]:block peer-checked/option3:[&_#question-expand-1]:hidden peer-checked/option3:[&_#answer-1]:block peer-checked/option4:[&_#question-expand-1]:block peer-checked/option4:[&_#question-close-1]:hidden peer-checked/option5:[&_#question-close-2]:block peer-checked/option5:[&_#question-expand-2]:hidden peer-checked/option5:[&_#answer-2]:block peer-checked/option6:[&_#question-expand-2]:block peer-checked/option6:[&_#question-close-2]:hidden peer-checked/option7:[&_#question-close-3]:block peer-checked/option7:[&_#question-expand-3]:hidden peer-checked/option7:[&_#answer-3]:block peer-checked/option8:[&_#question-expand-3]:block peer-checked/option8:[&_#question-close-3]:hidden peer-checked/option9:[&_#question-close-4]:block peer-checked/option9:[&_#question-expand-4]:hidden peer-checked/option9:[&_#answer-4]:block peer-checked/option10:[&_#question-expand-4]:block peer-checked/option10:[&_#question-close-4]:hidden peer-checked/option11:[&_#question-close-5]:block peer-checked/option11:[&_#question-expand-5]:hidden peer-checked/option11:[&_#answer-5]:block peer-checked/option12:[&_#question-expand-5]:block peer-checked/option12:[&_#question-close-5]:hidden peer-checked/option13:[&_#question-close-6]:block peer-checked/option13:[&_#question-expand-6]:hidden peer-checked/option13:[&_#answer-6]:block peer-checked/option14:[&_#question-expand-6]:block peer-checked/option14:[&_#question-close-6]:hidden"
+            >
+              <div class="space-y-6 md:space-y-10">
+                <h2 class="text-center">Frequently asked questions</h2>
+                <div
+                  class="flex flex-wrap bg-[#e7e7e9] rounded-lg w-fit mx-auto gap-5 p-2 [&>button]:transition-colors [&>button]:duration-300 [&>button]:w-full [&>button]:sm:w-fit hover:[&>button]:bg-[#4891FF] hover:[&>button]:text-[#fff]"
+                >
+                  <button>All</button>
+                  <button>Getting started</button>
+                  <button>Pricing</button>
+                </div>
+              </div>
+
+              <ul
+                class="max-w-[55rem] mx-auto [&>li]:py-5 [&>li:first-child]:pt-0 [&>li>div]:flex [&>li>div]:gap-3 [&>li>div]:justify-between [&>li_p:first-child]:text-lg [&>li_p:first-child]:lg:text-xl [&>li_p:first-child]:mb-2 [&>li_p:last-child]:md:mb-12"
+              >
+                <li class="border-[#cac9cc] border-b-2">
+                  <div>
+                    <p>
+                      How does the contact management feature help me keep track
+                      of clients and partners?
+                    </p>
+                    <label for="option-3" id="question-expand-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-plus"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          stroke="none"
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        ></path>
+                        <path d="M12 5l0 14"></path>
+                        <path d="M5 12l14 0"></path>
+                      </svg>
+                    </label>
+                    <label for="option-4" id="question-close-1" class="hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-x"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          stroke="none"
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        ></path>
+                        <path d="M18 6l-12 12"></path>
+                        <path d="M6 6l12 12"></path>
+                      </svg>
+                    </label>
+                  </div>
+                  <p id="answer-1" class="hidden text-[#494A4D]">
+                    Keep track of your contacts, gain valuable insights, analyse
+                    live data and performance metrics.
+                  </p>
+                </li>
+                <li class="border-[#cac9cc] border-b-2">
+                  <div>
+                    <p>
+                      Can I customize the dashboards and reporting feature to
+                      display the metrics that are most important to my
+                      business?
+                    </p>
+                    <label for="option-5" id="question-expand-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-plus"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          stroke="none"
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        ></path>
+                        <path d="M12 5l0 14"></path>
+                        <path d="M5 12l14 0"></path>
+                      </svg>
+                    </label>
+                    <label for="option-6" id="question-close-2" class="hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-x"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          stroke="none"
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        ></path>
+                        <path d="M18 6l-12 12"></path>
+                        <path d="M6 6l12 12"></path>
+                      </svg>
+                    </label>
+                  </div>
+                  <p id="answer-2" class="hidden text-[#494A4D]">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  </p>
+                </li>
+                <li class="border-[#cac9cc] border-b-2">
+                  <div>
+                    <p>
+                      How does the task management feature help me delegate
+                      tasks to my team and track progress?
+                    </p>
+                    <label for="option-7" id="question-expand-3">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-plus"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          stroke="none"
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        ></path>
+                        <path d="M12 5l0 14"></path>
+                        <path d="M5 12l14 0"></path>
+                      </svg>
+                    </label>
+                    <label for="option-8" id="question-close-3" class="hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-x"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          stroke="none"
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        ></path>
+                        <path d="M18 6l-12 12"></path>
+                        <path d="M6 6l12 12"></path>
+                      </svg>
+                    </label>
+                  </div>
+                  <p id="answer-3" class="hidden text-[#494A4D]">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  </p>
+                </li>
+                <li class="border-[#cac9cc] border-b-2">
+                  <div>
+                    <p>
+                      Can I collaborate with my team in real-time using all
+                      tools?
+                    </p>
+                    <label for="option-9" id="question-expand-4">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-plus"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          stroke="none"
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        ></path>
+                        <path d="M12 5l0 14"></path>
+                        <path d="M5 12l14 0"></path>
+                      </svg>
+                    </label>
+                    <label for="option-10" id="question-close-4" class="hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-x"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          stroke="none"
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        ></path>
+                        <path d="M18 6l-12 12"></path>
+                        <path d="M6 6l12 12"></path>
+                      </svg>
+                    </label>
+                  </div>
+                  <p id="answer-4" class="hidden text-[#494A4D]">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  </p>
+                </li>
+                <li class="border-[#cac9cc] border-b-2">
+                  <div>
+                    <p>Is the app available on all devices?</p>
+                    <label for="option-11" id="question-expand-5">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-plus"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          stroke="none"
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        ></path>
+                        <path d="M12 5l0 14"></path>
+                        <path d="M5 12l14 0"></path>
+                      </svg>
+                    </label>
+                    <label for="option-12" id="question-close-5" class="hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-x"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          stroke="none"
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        ></path>
+                        <path d="M18 6l-12 12"></path>
+                        <path d="M6 6l12 12"></path>
+                      </svg>
+                    </label>
+                  </div>
+                  <p id="answer-5" class="hidden text-[#494A4D]">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  </p>
+                </li>
+                <li class="border-[#cac9cc] border-b-2">
+                  <div>
+                    <p>
+                      How does the app help me stay compliant when working with
+                      freelancers and contractors?
+                    </p>
+                    <label for="option-13" id="question-expand-6">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-plus"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          stroke="none"
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        ></path>
+                        <path d="M12 5l0 14"></path>
+                        <path d="M5 12l14 0"></path>
+                      </svg>
+                    </label>
+                    <label for="option-14" id="question-close-6" class="hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-x"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          stroke="none"
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        ></path>
+                        <path d="M18 6l-12 12"></path>
+                        <path d="M6 6l12 12"></path>
+                      </svg>
+                    </label>
+                  </div>
+                  <p id="answer-6" class="hidden text-[#494A4D]">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="bg-[#131316] text-[#BCC2C3] pt-28 pb-10 [&_h3]:text-[#DFDEE2] [&_h3]:text-lg [&_h3]:font-semibold [&_ul]:space-y-4 [&_li]:transition-opacity [&_li]:cursor-pointer hover:[&_li]:opacity-50"
+    >
+      <div class="container space-y-10">
+        <img
+          class="object-contain self-start"
+          src="https://raw.githubusercontent.com/fszabi/landing_page_1/main/img/logo2.png"
+          alt="growth logo"
+        />
+        <div
+          class="grid grid-cols-[repeat(auto-fit,_minmax(min(11rem,_100%),_1fr))] gap-y-10 gap-x-16"
+        >
+          <div class="rounded-2xl p-6 bg-[#fff] max-w-[25rem] xs:col-span-2">
+            <p class="text-[#35333C] font-medium text-lg lg:text-xl mb-1">
+              Subscribe to newsletter
+            </p>
+            <p class="text-[#131316] mb-5">
+              Subscribe now to receive tips on how to take your business to the
+              next level.
+            </p>
+            <div
+              class="flex flex-wrap justify-between gap-y-3 gap-x-5 [&>*]:h-[50px]"
+            >
+              <input
+                class="max-w-[210px] border border-[#BEBDC6] outline-none p-3 rounded-lg text-[#605E6D] placeholder:text-[#605E6D] focus:placeholder:text-transparent"
+                type="text"
+                placeholder="Enter your email"
+              />
+              <button
+                class="w-fit px-5 py-3 rounded-lg bg-[#4891FF] text-[#fff] transition-colors duration-300 hover:bg-[#1570F9]"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+          <div class="space-y-5">
+            <h3>Company</h3>
+            <ul>
+              <li>About</li>
+              <li>Our Process</li>
+              <li>Join our team</li>
+            </ul>
+          </div>
+          <div class="space-y-5">
+            <h3>Resources</h3>
+            <ul>
+              <li>News</li>
+              <li>Research</li>
+              <li>Recent Projects</li>
+            </ul>
+          </div>
+          <div class="space-y-5">
+            <h3>Contact</h3>
+            <p class="hover:opacity-50 transition-opacity cursor-pointer">
+              hello@growthapp.com
+            </p>
+          </div>
+        </div>
+        <div class="space-y-4 md:space-y-14">
+          <div
+            class="flex gap-4 [&>img]:cursor-pointer [&>img]:transition-opacity hover:[&>img]:opacity-50"
+          >
+            <img
+              src="https://raw.githubusercontent.com/fszabi/landing_page_1/4edf8d37b129ea03a8503a54802ee39ce2709d23/svg/linkedin.svg"
+              alt="linkedin svg"
+            />
+            <img
+              src="https://raw.githubusercontent.com/fszabi/landing_page_1/4edf8d37b129ea03a8503a54802ee39ce2709d23/svg/twitter.svg"
+              alt="twitter svg"
+            />
+          </div>
+          <p class="text-sm">© 2023 Growth. All rights reserved</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
